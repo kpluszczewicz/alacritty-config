@@ -1,0 +1,74 @@
+live_config_reload = true
+
+[cursor.style]
+blinking = "Always"
+
+[colors]
+transparent_background_colors = true
+
+[colors.bright]
+black = "#928374"
+blue = "#83a598"
+cyan = "#8ec07c"
+green = "#b8bb26"
+magenta = "#d3869b"
+red = "#fb4934"
+white = "#ebdbb2"
+yellow = "#fabd2f"
+
+[colors.normal]
+black = "#282828"
+blue = "#458588"
+cyan = "#689d6a"
+green = "#98971a"
+magenta = "#b16286"
+red = "#cc241d"
+white = "#a89984"
+yellow = "#d79921"
+
+[colors.primary]
+background = "#282828"
+foreground = "#ebdbb2"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 15.0
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "JetBrainsMonoNL NF"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 2
+
+[keyboard]
+bindings = [
+  # { chars = '\p', key = "LBracket", mods = "Command" },
+  # { chars = '\n', key = "RBracket", mods = "Command" },
+  { chars = "\u001E", key = "Key6", mods = "Control" },
+  { key = "[", mods = "Command", action = "ToggleViMode" },
+  # NOTE: Normally terminal doesn't make difference between
+  { key = "Space", mods = "Shift", chars = "\u001C" },
+
+  # NOTE: Need to take care Alacrity handles <Shift-Return> for jump to lower line
+  { key = "Return", mods = "Shift", chars = "\u001B[13;2u"}
+]
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+startup_mode = "Windowed"
+opacity = 0.90
+# decorations = "buttonless"
+padding = { x = 15, y = 15 }
+dynamic_padding = false
+# option_as_alt = "Both"
